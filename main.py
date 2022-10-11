@@ -8,7 +8,11 @@ printList = []
 
 for i in range(len(words)):
     for j in range(len(are)):
-        idxlst.append(words[i].find(are[j]))
+        if j == 0:
+            prevIdx = 0
+        else:
+            prevIdx = idxlst[j-1]
+        idxlst.append(words[i].find(are[j], prevIdx))
     if -1 not in idxlst and sorted(idxlst) == idxlst:
         printList.append(words[i])
     idxlst = []
