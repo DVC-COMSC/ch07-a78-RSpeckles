@@ -11,7 +11,7 @@ for i in range(len(words)):
     for j in range(len(are)):
         #prevIdx is used to determine the starting index of the find command
         #This makes sure that only letters after the last found letter are evaluated
-        #letters in "are" that come out of order should not be counted
+        #letters in "are" that come out of order should not be counted, eg. the first e in "assertive"
         if j == 0:
             prevIdx = 0
         else:
